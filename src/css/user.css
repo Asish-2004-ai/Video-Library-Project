@@ -1,0 +1,46 @@
+.user-login-form-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url('..'); */
+  background-size: cover;
+  background-position: center;
+}
+
+.user-login-form {
+  padding: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 500px;
+}
+
+.form-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.form-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-button {
+  width: 48%;
+  padding: 10px;
+  border-radius: 5px;
+}

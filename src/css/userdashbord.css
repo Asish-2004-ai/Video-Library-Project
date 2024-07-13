@@ -1,0 +1,78 @@
+/* userdashbord.css */
+
+.user-dashboard {
+  background: linear-gradient(to right, #538760, #d5edd3);  
+  color: white;
+  /* padding: 20px;
+  min-height: 400px; */
+  /* margin-bottom: 500px; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(235, 174, 174, 0.5);
+}
+
+
+
+
+
+
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* width: 100%; */
+}
+
+.video-card {
+  background: rgba(232, 184, 184, 0.1);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-frame iframe {
+  border: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.video-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.video-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.video-actions .btn-like,
+.video-actions .btn-dislike {
+  background: transparent;
+  border: none;
+  color: rgb(20, 2, 2);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.video-actions .btn-like:hover,
+.video-actions .btn-dislike:hover {
+  color: #0008ff;
+}

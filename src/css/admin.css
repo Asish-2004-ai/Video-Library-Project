@@ -1,0 +1,51 @@
+/* Admin.css */
+
+.login-container {
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 20px;
+}
+
+.login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-icon {
+    font-size: 3rem;
+    color: #6e8efb;
+}
+
+.login-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    background: #6e8efb;
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #a777e3;
+}

@@ -1,0 +1,62 @@
+/* admindashbord.css */
+
+.admin-dashboard {
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(236, 234, 234, 0.1);
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #343a40;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.table {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.video-preview {
+  width: 200px;
+  height: 120px;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,83 @@
+/* home.css */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 20px;
+}
+
+.home-main {
+  text-align: center;
+  background: rgb(249, 246, 246);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(236, 233, 233, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.home-main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home-main p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group input {
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.input-group button {
+  border: none;
+  border-radius: 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #115de0;
+  width: 140px;
+  
+}
+
+button:hover{
+color: #dee1e6;
+  border: none;
+
+}
+
+
+
+.btn-warning {
+  background: #f39c12;
+  border: none;
+}
+
+.btn-warning:hover {
+  background: #e67e22;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  border: none;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+

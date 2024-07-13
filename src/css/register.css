@@ -1,0 +1,46 @@
+/* App.css */
+.register-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .register-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-form dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .register-form dl dd input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5733;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .register-form button:hover {
+    background-color: #c70039;
+  }
+  

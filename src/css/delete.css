@@ -1,0 +1,42 @@
+.delete-video-container {
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    padding: 0;
+    border-bottom: none;
+  }
+  
+  .card-header iframe {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-footer {
+    padding: 20px;
+    border-top: none;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .btn {
+    min-width: 100px;
+  }
+  

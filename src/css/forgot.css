@@ -1,0 +1,91 @@
+.forgot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* light gray background */
+}
+
+main{
+  text-align: center;
+  background: rgb(249, 246, 246);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(236, 233, 233, 0.2);
+  width: 100%;
+  max-width: 600px;
+  /* max-height: 50px; */
+  /* height: -500px; */
+
+}
+.header{
+ position: relative;
+ top: 180px;
+}
+.form-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+dl{
+  margin-top: 30px;
+}
+.bi-lock-fill::before{
+  position: relative;
+  top: 100px;
+}
+
+.form-input input{
+  width: 100px;
+}
+
+.forgot-form {
+  /* background: white; */
+  padding: 2rem;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 300px;
+  text-align: center; /* Center the contents inside the form */
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.icon-container {
+  margin-bottom: 1rem; /* Space between the icon and the form fields */
+}
+
+.forgot-form dl {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.forgot-form dd {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.forgot-form input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.forgot-form .bi-lock-fill {
+  position: absolute;
+  left: 0.5rem;
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.forgot-form button {
+  width: 100%;
+  padding: 0.75rem;
+}
