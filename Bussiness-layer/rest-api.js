@@ -112,13 +112,6 @@ app.get("/get-categoryid/:id",(req,res)=>{
     })
 })
 
-
-
-
-
-
-
-
 app.put("/edit-video/:id", (req, res) => {
     var id = parseInt(req.params.id);
 
@@ -138,8 +131,6 @@ app.put("/edit-video/:id", (req, res) => {
         res.status(500).send('Database connection failed');
     });
 });
-
-
 
 app.post("/add-video", (req, res)=>{
 
