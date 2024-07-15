@@ -41,7 +41,7 @@ export function Userlogin() {
       <form onSubmit={formik.handleSubmit} className="user-login-form">
         <h3 className="form-header text-dark bi bi-person-circle"> User Login</h3>
         <dl>
-          <dd><TextField variant="outlined" label="UserID*" fullWidth name="UserId" helperText='Id requierd' onChange={formik.handleChange} required type="text"></TextField></dd>
+          <dd><TextField variant="outlined" label="UserID" fullWidth name="UserId" helperText='Id requierd' onChange={formik.handleChange} required type="text"></TextField></dd>
           <dd><TextField variant="outlined" className="mt-3 w-100" label="Password*" fullWidth name="Password" onChange={formik.handleChange} type="password"></TextField></dd>
           <dd><Checkbox></Checkbox><label className="text-dark">Remember me</label></dd>
        

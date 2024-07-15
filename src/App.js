@@ -33,7 +33,7 @@ export function Header() {
     '/delete-video',
     '/forgot',
     '/register',
-    '/video' // Add '/video' to this array
+    '/video' 
   ];
 
   return (

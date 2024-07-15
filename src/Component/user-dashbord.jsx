@@ -73,7 +73,7 @@ export function Userdashbord() {
       <h3 className="dashboard-title">User Dashboard</h3>
       <div className="col-2">
         <nav className="sticky-top" style={{ top: '20px' }}>
-          <label className="text-dark mb-2">Select Categories</label>
+          <label className="text-white mb-2">Select Categories</label>
           <select className="form-select" onChange={handleChange}>
             {categories.map(category =>
               <option key={category.CategoryId} value={category.CategoryId}>{category.CategoryName.toUpperCase()}</option>
