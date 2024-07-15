@@ -22,10 +22,6 @@ app.get("/get-users", (req, res)=>{
     });
 });
 
-
-  
-
-
 app.post("/register-user",(req, res)=>{
 
     var user = {
