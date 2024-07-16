@@ -7,7 +7,7 @@ export function Dashbord() {
     const [Video, setVideo] = useState([]);
 
     function loadVideos() {
-        axios.get('http://127.0.0.1:3030/get-video')
+        axios.get('https://video-library-project.vercel.app/get-video')
             .then(res => {
                 setVideo(res.data);
             })

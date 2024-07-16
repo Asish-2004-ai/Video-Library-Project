@@ -28,7 +28,7 @@ export function Register() {
     initialValues: { UserId: '', UserName: '', Password: '', Email: '', Mobile: '' },
     validationSchema: validationSchema,
     onSubmit: (value => {
-      axios.post('http://127.0.0.1:3030/register-user', value)
+      axios.post('https://video-library-project.vercel.app/register-user', value)
         .then(() => {
           navigate('/user-login');
         });

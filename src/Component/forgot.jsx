@@ -25,11 +25,11 @@ export function Forgot() {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            axios.get('http://127.0.0.1:3030/get-users')
+            axios.get('https://video-library-project.vercel.app/get-users')
                 .then(res => {
                     const user = res.data.find(item => item.Email === values.Email);
                     if (user && user.UserId === id) {
-                        axios.put(`http://127.0.0.1:3030/forgot/${id}`, { Password: values.Password })
+                        axios.put(`https://video-library-project.vercel.app/forgot/${id}`, { Password: values.Password })
                             .then(() => {
                                 alert('Password changed successfully');
                                 navigate('/user-login');

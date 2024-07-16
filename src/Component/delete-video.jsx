@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "../css/delete.css"; // Import your CSS file
+import "../css/delete.css"; 
 
 export function Deletevideo() {
   let params = useParams([]);
@@ -18,7 +18,7 @@ export function Deletevideo() {
   }]);
 
   function yesclick() {
-    axios.delete(`http://127.0.0.1:3030/delete-video/${params.id}`).then(() => {
+    axios.delete(`https://video-library-project.vercel.app/delete-video/${params.id}`).then(() => {
       alert("Video Deleted");
       navigate("/admin-dashbord");
     });
@@ -29,7 +29,7 @@ export function Deletevideo() {
   }
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3030/get-videos/${params.id}`).then((res) => {
+    axios.get(`https://video-library-project.vercel.app/get-videos/${params.id}`).then((res) => {
       setdvideo(res.data);
     });
   }, []);

@@ -8,7 +8,7 @@ export function VideoPage() {
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3030/get-videos/${id}`)
+    axios.get(`https://video-library-project.vercel.app/get-videos/${id}`)
       .then(res => {
         setVideo(res.data[0]);
       });
