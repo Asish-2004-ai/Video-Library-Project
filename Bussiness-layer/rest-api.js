@@ -7,7 +7,7 @@ var cors = require("cors");
 var app = express()
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://video-library-client.vercel.app/"],
         methods:["POST","GET"],
         credentials:true
     }
