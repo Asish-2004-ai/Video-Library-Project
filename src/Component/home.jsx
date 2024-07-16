@@ -10,17 +10,26 @@ export function Password() {
   let navigate = useNavigate();
   const formik = useFormik({
     initialValues: { UserId: '', Password: '' },
-    onSubmit: (value => {
-      axios.get('http://video-library-project.vercel.app/get-users')
+    onSubmit: (value) => {
+      axios.get('https://video-library-project.vercel.app/get-users')
         .then(res => {
-          var data = res.data.find(item => item.Password === value.Password);
-          if (data) {
-            navigate('/user-dashbord');
+          if (Array.isArray(res.data)) {
+            var data = res.data.find(item => item.Password === value.Password);
+            if (data) {
+              navigate('/user-dashbord');
+            } else {
+              alert('Invalid User');
+            }
           } else {
-            alert('Invalid User');
+            console.error("Expected an array but got:", res.data);
+            alert('Unexpected response format');
           }
+        })
+        .catch(err => {
+          console.error("Error fetching data", err);
+          alert('Error fetching data');
         });
-    })
+    }
   });
 
   return (
@@ -45,19 +54,28 @@ export function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(['user-id']);
   const formik = useFormik({
     initialValues: { UserId: '', UserName: '', Password: '', Email: '', Mobile: '' },
-    onSubmit: (value => {
+    onSubmit: (value) => {
       axios.get('http://127.0.0.1:3030/get-users')
         .then(res => {
-          var data = res.data.find(client => client.Email === value.Email);
-          if (data) {
-            setIsEmailVisible(false);
-            setCookie('user-id', value.Email);
-            setview(<Password />);
+          if (Array.isArray(res.data)) {
+            var data = res.data.find(client => client.Email === value.Email);
+            if (data) {
+              setIsEmailVisible(false);
+              setCookie('user-id', value.Email);
+              setview(<Password />);
+            } else {
+              setview(<Resister />);
+            }
           } else {
-            setview(<Resister />);
+            console.error("Expected an array but got:", res.data);
+            alert('Unexpected response format');
           }
+        })
+        .catch(err => {
+          console.error("Error fetching data", err);
+          alert('Error fetching data');
         });
-    })
+    }
   });
 
   return (
@@ -68,7 +86,7 @@ export function Home() {
         <div className="input-group">
           <form onSubmit={formik.handleSubmit} className="input-group">
             {EmailVisible && (
-              <TextField id="outlined-controlled" className="w-50" fullWidth color="" label="Email Address*" name="Email" type='email' onChange={formik.handleChange} variant="outlined" />
+              <TextField id="outlined-controlled" className="w-50" fullWidth label="Email Address*" name="Email" type='email' onChange={formik.handleChange} variant="outlined" />
             )}
             {EmailVisible && (
               <button className="" type="submit">
