@@ -18,7 +18,7 @@ export function Deletevideo() {
   }]);
 
   function yesclick() {
-    axios.delete(`https://video-library-project.vercel.app/delete-video/${params.id}`).then(() => {
+    axios.delete(`https://video-library-server.vercel.app/delete-video/${params.id}`).then(() => {
       alert("Video Deleted");
       navigate("/admin-dashbord");
     });
@@ -29,7 +29,7 @@ export function Deletevideo() {
   }
 
   useEffect(() => {
-    axios.get(`https://video-library-project.vercel.app/get-videos/${params.id}`).then((res) => {
+    axios.get(`https://video-library-server.vercel.app/get-videos/${params.id}`).then((res) => {
       setdvideo(res.data);
     });
   }, []);

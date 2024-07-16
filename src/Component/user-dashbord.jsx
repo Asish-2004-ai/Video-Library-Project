@@ -17,7 +17,7 @@ export function Userdashbord() {
   }
 
   function Loadcategories() {
-    axios.get('https://video-library-project.vercel.app/get-categories')
+    axios.get('https://video-library-server.vercel.app/get-categories')
       .then(res => {
         const response = [{ CategoryId: 'ALL', CategoryName: 'ALL' }, ...res.data];
         setCategories(response);
@@ -27,9 +27,9 @@ export function Userdashbord() {
   function handleChange(e) {
     const categoryId = e.target.value;
     if (categoryId === 'ALL') {
-      Loadvideos("https://video-library-project.vercel.app/get-video");
+      Loadvideos("https://video-library-server.vercel.app/get-video");
     } else {
-      Loadvideos(`https://video-library-project.vercel.app/get-categoryid/${categoryId}`);
+      Loadvideos(`https://video-library-server.vercel.app/get-categoryid/${categoryId}`);
     }
   }
 
@@ -40,7 +40,7 @@ export function Userdashbord() {
   function handleLike(videoId) {
     const updatedVideos = videos.map(video => {
       if (video.VideoId === videoId) {
-        axios.put(`https://video-library-project.vercel.app/update-like/${videoId}`, { Likes: video.Likes + 1 })
+        axios.put(`https://video-library-server.vercel.app/update-like/${videoId}`, { Likes: video.Likes + 1 })
           .then(() => {
             video.Likes += 1;
           });
@@ -53,7 +53,7 @@ export function Userdashbord() {
   function handleDislike(videoId) {
     const updatedVideos = videos.map(video => {
       if (video.VideoId === videoId) {
-        axios.put(`https://video-library-project.vercel.app/update-dislike/${videoId}`, { Dislikes: video.Dislikes + 1 })
+        axios.put(`https://video-library-server.vercel.app/update-dislike/${videoId}`, { Dislikes: video.Dislikes + 1 })
           .then(() => {
             video.Dislikes += 1;
           });
@@ -64,7 +64,7 @@ export function Userdashbord() {
   }
 
   useEffect(() => {
-    Loadvideos('https://video-library-project.vercel.app/get-video');
+    Loadvideos('https://video-library-server.vercel.app/get-video');
     Loadcategories();
   }, []);
 

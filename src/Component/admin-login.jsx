@@ -14,7 +14,7 @@ export function Admin() {
             Password: ''
         },
         onSubmit: (value) => {
-            axios.get('https://video-library-project.vercel.app/get-admin')
+            axios.get('https://video-library-server.vercel.app/get-admin')
                 .then(res => {
                     if (value.UserId === res.data[0].UserId && value.Password === res.data[0].Password) {
                         setCookie('admin-id', value.UserId);

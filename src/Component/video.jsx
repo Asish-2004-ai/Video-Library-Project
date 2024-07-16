@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-// import "../css/videopage.css"; 
 
 export function VideoPage() {
   const { id } = useParams();
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://video-library-project.vercel.app/get-videos/${id}`)
+    axios.get(`https://video-library-server.vercel.app/get-videos/${id}`)
       .then(res => {
         setVideo(res.data[0]);
       });
