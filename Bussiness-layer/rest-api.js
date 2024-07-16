@@ -13,7 +13,7 @@ app.use(cors(
     }
 ))
 
-var conString = "mongodb://127.0.0.1:27017";
+var conString = "mongodb+srv://asish:asish@asishcluster.n0oqxmr.mongodb.net/"
 
 var app = express();
 app.use(express.urlencoded({extended:true}));
