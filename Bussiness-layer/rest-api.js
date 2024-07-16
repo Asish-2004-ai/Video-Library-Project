@@ -4,6 +4,15 @@ var express = require("express");
 var mongoClient = require("mongodb").MongoClient;
 var cors = require("cors");
 
+var app = express()
+app.use(cors(
+    {
+        origin:["https://deploy-mern-lwhq.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
+
 var conString = "mongodb://127.0.0.1:27017";
 
 var app = express();
