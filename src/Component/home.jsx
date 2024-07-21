@@ -55,7 +55,7 @@ export function Home() {
   const formik = useFormik({
     initialValues: { UserId: '', UserName: '', Password: '', Email: '', Mobile: '' },
     onSubmit: (value) => {
-      axios.get('http://127.0.0.1:3030/get-users')
+      axios.get('https://mern-api-snowy.vercel.app/get-users')
         .then(res => {
           if (Array.isArray(res.data)) {
             var data = res.data.find(client => client.Email === value.Email);
