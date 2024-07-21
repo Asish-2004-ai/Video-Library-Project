@@ -28,14 +28,14 @@ export function Editvideo() {
 
   function Loadvideo() {
     axios
-      .get(`https://video-library-server.vercel.app/get-videos/${param.id}`)
+      .get(`https://mern-api-snowy.vercel.app/${param.id}`)
       .then((res) => {
         setvideos(res.data);
       });
   }
 
   function Loadcategories() {
-    axios.get("https://video-library-server.vercel.app/get-categories").then((response) => {
+    axios.get("https://mern-api-snowy.vercel.app/get-categories").then((response) => {
       response.data.unshift({
         CategoryId: "-1",
         CategoryName: "Select Category",
@@ -55,7 +55,7 @@ export function Editvideo() {
       CategoryId: videos[0].CategoryId,
     },
     onSubmit: (video) => {
-      axios.put(`https://video-library-server.vercel.app/edit-video/${video.VideoId}`, video).then(() => {
+      axios.put(`https://mern-api-snowy.vercel.app/${video.VideoId}`, video).then(() => {
         alert("Video updated");
         navigate("/admin-dashbord");
       });

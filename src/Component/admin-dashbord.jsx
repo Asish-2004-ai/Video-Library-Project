@@ -7,7 +7,7 @@ export function Dashbord() {
     const [Video, setVideo] = useState([]);
 
     function loadVideos() {
-        axios.get('https://video-library-server.vercel.app/get-video')
+        axios.get('https://mern-api-snowy.vercel.app/get-video')
             .then(res => {
                 setVideo(res.data);
             })

@@ -12,7 +12,7 @@ export function Addvideo() {
     const formik = useFormik({
         initialValues: { VideoId: 0, Title: '', Url: '', Description: '', Views: 0, Likes: 0, Dislikes: 0, CategoryId: 0 },
         onSubmit: (video => {
-            axios.post('https://video-library-server.vercel.app/add-video', video)
+            axios.post('https://mern-api-snowy.vercel.app/add-video', video)
                 .then(() => {
                     alert('Video added successfully');
                     navigate('/admin-dashbord');
@@ -21,7 +21,7 @@ export function Addvideo() {
     });
 
     function Loadcategories() {
-        axios.get('video-library-server.vercel.app/get-categories')
+        axios.get('https://mern-api-snowy.vercel.app/get-categories')
             .then(response => {
                 response.data.unshift({ CategoryId: '-1', CategoryName: 'Select Category' });
                 setcategories(response.data);

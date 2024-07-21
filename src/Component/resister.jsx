@@ -28,7 +28,7 @@ export function Register() {
     initialValues: { UserId: '', UserName: '', Password: '', Email: '', Mobile: '' },
     validationSchema: validationSchema,
     onSubmit: (value => {
-      axios.post('https://video-library-server.vercel.app/register-user', value)
+      axios.post('https://mern-api-snowy.vercel.app/register-user', value)
         .then(() => {
           navigate('/user-login');
         });

@@ -25,11 +25,11 @@ export function Forgot() {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            axios.get('https://video-library-server.vercel.app/get-users')
+            axios.get('https://mern-api-snowy.vercel.app/get-users')
                 .then(res => {
                     const user = res.data.find(item => item.Email === values.Email);
                     if (user && user.UserId === id) {
-                        axios.put(`https://video-library-server.vercel.app/forgot/${id}`, { Password: values.Password })
+                        axios.put(`https://mern-api-snowy.vercel.app/forgot/${id}`, { Password: values.Password })
                             .then(() => {
                                 alert('Password changed successfully');
                                 navigate('/user-login');

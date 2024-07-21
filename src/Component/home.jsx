@@ -11,7 +11,7 @@ export function Password() {
   const formik = useFormik({
     initialValues: { UserId: '', Password: '' },
     onSubmit: (value) => {
-      axios.get('https://video-library-server.vercel.app/get-users')
+      axios.get('https://mern-api-snowy.vercel.app/get-users')
         .then(res => {
           if (Array.isArray(res.data)) {
             var data = res.data.find(item => item.Password === value.Password);
