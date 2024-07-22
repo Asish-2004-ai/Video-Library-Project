@@ -5,6 +5,7 @@ import '../css/admindashbord.css';
 
 export function Dashbord() {
     const [Video, setVideo] = useState([]);
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
 
     function loadVideos() {
         axios.get('https://mern-api-snowy.vercel.app/get-video')
@@ -18,7 +19,26 @@ export function Dashbord() {
 
     useEffect(() => {
         loadVideos();
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 300) {
+            setShowScrollToTop(true);
+        } else {
+            setShowScrollToTop(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
     return (
         <div className="admin-dashboard">
@@ -53,6 +73,11 @@ export function Dashbord() {
                     ))}
                 </tbody>
             </table>
+            {showScrollToTop && (
+                <button className="scroll-to-top-btn" onClick={scrollToTop}>
+                    ↑ Scroll to Top
+                </button>
+            )}
         </div>
     );
 }
