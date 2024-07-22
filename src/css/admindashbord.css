@@ -67,11 +67,11 @@
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50%;
+  border-radius: 20px;
   padding: 10px 15px;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 19px rgba(16, 2, 2, 0.937);
   transition: opacity 0.3s;
 }
 

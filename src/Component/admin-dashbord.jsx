@@ -75,7 +75,7 @@ export function Dashbord() {
             </table>
             {showScrollToTop && (
                 <button className="scroll-to-top-btn" onClick={scrollToTop}>
-                    ↑ Scroll to Top
+                    ↑ Back to Top
                 </button>
             )}
         </div>
